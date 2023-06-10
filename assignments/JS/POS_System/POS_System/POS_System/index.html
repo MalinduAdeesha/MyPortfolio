@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="assests/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assests/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/boostrap/css/bootstrap-grid.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            font-family: 'Alkatra', cursive;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background-color: #ECEEED;
+        }
+
+        header>section {
+            border: 2px solid #5c636a;
+            background-color: #badbcc;
+        }
+
+        header>section>nav>div>div>ul {
+
+            position: absolute;
+            right: 0;
+        }
+
+        .hButton {
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 144, 162, 0.68);
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+        .hButton:hover {
+            background-color: rgba(5, 74, 82, 0.68);
+        }
+
+        #mClass01 {
+            width: 30vw;
+
+            border: 2px solid #0d6efd;
+            padding: 15px;
+            border-radius: 20px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100px;
+            margin: auto;
+
+            /*display: none;*/
+        }
+
+        /*--------------------------------------customer-------------------------------------------------------*/
+
+        #mClass02 {
+            display: none;
+        }
+
+        #mClass02>section>h3 {
+            background-color: #0dcaf0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #mClass02>section:first-child {
+            width: 60vw;
+
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+            border: 2px solid #5c636a;
+            border-radius: 10px;
+            padding: 10px;
+
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #mClass02>section:first-child>form>div>label {
+            font-weight: bold;
+            color: peru;
+        }
+
+        #mClass02>section:first-child>form>div>input:hover {
+            background-color: #b6d4fe;
+        }
+
+        #mClass02>section:first-child>form>.button-set {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mClass02>section:first-child>form>div>div>button {
+            border-radius: 30px;
+            width: fit-content;
+            font-size: 1.2vw;
+        }
+
+        #mClass02>section:nth-child(2) {
+            width: 65vw;
+
+            box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+
+            border: 2px solid #523e02;
+
+            padding: 10px 10px 10px;
+
+            position: absolute;
+            top: 575px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #mClass02>section:nth-child(2)>table>thead>tr>th {
+            background-color: #8BD8A1;
+        }
+
+        /*---------------------------------------store------------------------------------------------------*/
+
+        #mClass03 {
+            display: none;
+        }
+
+        #mClass03>section>h3 {
+            background-color: #0dcaf0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #mClass03>section:first-child {
+            width: 60vw;
+
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+            border: 2px solid #5c636a;
+            border-radius: 10px;
+            padding: 10px;
+
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #mClass03>section:first-child>form>div>label {
+            font-weight: bold;
+            color: peru;
+        }
+
+        #mClass03>section:first-child>form>div>input:hover {
+            background-color: #b6d4fe;
+        }
+
+        #mClass03>section:first-child>form>.button-set {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mClass03>section:first-child>form>div>div>button {
+            border-radius: 30px;
+            width: fit-content;
+            font-size: 1.2vw;
+        }
+
+        #mClass03>section:nth-child(2) {
+            width: 65vw;
+
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+            border: 2px solid #523e02;
+
+            padding: 10px 10px 10px;
+
+            position: absolute;
+            top: 575px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #mClass03>section:nth-child(2)>table>thead>tr>th {
+            background-color: #8BD8A1;
+        }
+
+        /*------------------------------------place order-----------------------------------------------------*/
+
+        #mClass04 {
+            display: none;
+        }
+
+        #mClass04Sub01 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #mClass04Sub01>section {
+            border: 1px solid #523e02;
+            border-top: none;
+            width: 45vw;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: rgb(49, 51, 59) 0px 4px 12px;
+            border-radius: 10px;
+
+        }
+
+        #mClass04Sub01>section>form>div>div>input:hover {
+            background-color: #b6d4fe;
+        }
+
+        #mClass04Sub01>section>form>div>div>select:hover {
+            background-color: #b6d4fe;
+        }
+
+        #mClass04Sub01>section:nth-child(2)>form>button {
+            background-color: #5fc5ea;
+            font-size: 1vw;
+            font-weight: bolder;
+
+            position: relative;
+            left: 36vw;
+
+        }
+
+        #mClass04Sub02 {
+            width: 80vw;
+            border: 2px solid #5c636a;
+
+            padding: 10px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 10px auto auto;
+        }
+
+        #mClass04Sub02>label:nth-child(2) {
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        #mClass04Sub02>label:nth-child(3) {
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        #mClass04Sub02>button {
+            background-color: #20c997;
+            border-radius: 10px;
+            border: 2px solid #5c636a;
+            font-weight: bold;
+
+            position: relative;
+            left: 55vw;
+            margin-top: 10px;
+        }
+        .headerClass01{
+            background-color: #ff253a;
+        }
+        .nav-item button{
+            background-color: transparent;
+            border: none;
+            margin: 20px;
+        }
+        form button{
+            position: relative;
+            top: 100px;
+            width: 100%;
+
+        }
+        #btnLogin{
+            color: white;
+            background-color: blue;
+
+        }
+        #btnLogin:hover{
+            color: black;
+            background-color: transparent;
+        }
+
+        #mClass01{
+            width: 500px;
+            height: 400px;
+            position: relative;
+            border: 2px solid red;
+        }
+        .mb-3{
+            position: relative;
+            top: 70px;
+        }
+        #mClass02 #customer{
+            width: 100%;
+            height: 600px;
+        }
+        #mClass03 #store{
+            width: 100%;
+            height: 600px;
+        }
+        #mClass04 #pOrder{
+            width: 50%;
+            height: 400px;
+        }
+        #mClass02>section:nth-child(2){
+            width: 100%;
+            top: 800px;
+        }
+        #mClass03>section:nth-child(2){
+            width: 100%;
+            top: 800px;
+        }
+        #mClass04>section:nth-child(2){
+            width: 90%;
+        }
+        #table {
+            position: relative;
+            border: none;
+        }
+        .button-set{
+            position: relative;
+            top: 130px;
+        }
+        #mClass02>section:first-child>form>div>div>button{
+            width: 150px;
+            border-radius: 5px;
+        }
+        #mClass03>section:first-child>form>div>div>button{
+            width: 150px;
+            border-radius: 5px;
+        }
+        #mClass02>section>h3{
+            font-family:'Alkatra', cursive ;
+            font-size: 2.5em;
+            color: palegreen;
+            height: 50px;
+            background: gray;
+        }
+        #mClass03>section>h3{
+            font-family:'Alkatra', cursive ;
+            font-size: 2.5em;
+            color: palegreen;
+            height: 50px;
+            background: gray;
+        }
+        #mClass02 .form-label{
+            color: red;
+        }
+
+       #customer form{
+            background: transparent;
+        }
+        #mClass04Sub01>section:nth-child(2)>form>button{
+            position: relative;
+            top: 160px;
+            left:-350px;
+            background: goldenrod;
+
+        }
+        #mClass04Sub02{
+            position: relative;
+            top: 100px;
+            right: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+
+    <section class="headerClass01" id="hClass01">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <h2>POS System</h2>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <button type="button" id="btnHome" class="hButton">Home</button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" id="btnCustomer" class="hButton">Customer</button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" id="btnStore" class="hButton">Store</button>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" id="btnPlaceOrder" class="hButton">Place Order</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+</header>
+
+<main>
+
+    <section id="mClass01">
+
+        <form>
+            <div class="mb-3">
+                <label for="userName" class="form-label">User name</label>
+                <input type="text" class="form-control" id="userName" placeholder="name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*******">
+            </div>
+
+            <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
+        </form>
+
+    </section>
+
+    <section id="mClass02">
+
+        <section id="customer">
+
+            <h3> Manage Customers</h3>
+
+            <form class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="inputCustomerId" class="form-label">Customer ID</label>
+                    <input type="text" class="form-control" id="inputCustomerId" placeholder="eg : 001">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="inputCustomerName" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="inputCustomerName" placeholder="eg : Kamal">
+                </div>
+
+                <div class="col-12">
+                    <label for="inputCustomerAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputCustomerAddress" placeholder="eg : Colombo">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputCustomerContact" class="form-label">Contact number</label>
+                    <input type="text" class="form-control" id="inputCustomerContact" placeholder="eg : 0711234567">
+                </div>
+
+                <div class="button-set">
+
+                    <div>
+                        <button type="button" class="btn btn-primary" id="btnSaveC">Save</button>
+                    </div>
+
+                    <div>
+                        <button type="button" id="btnUpdateC" class="btn btn-primary" style="background-color: orangered">Update</button>
+                    </div>
+
+                    <div>
+                        <button type="button" id="btnDeleteC" class="btn btn-primary" style="background-color: #ff253a">Delete</button>
+                    </div>
+
+                    <div>
+                        <button type="reset" id="btnClearC" class="btn btn-primary" style="background-color: firebrick" >Clear</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section id="table">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact</th>
+                </tr>
+                </thead>
+                <tbody id="customerTBody"></tbody>
+            </table>
+
+        </section>
+
+    </section>
+
+    <section id="mClass03">
+
+        <section id="store">
+
+            <h3> Manage Store</h3>
+
+            <form class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="inputItemCode" class="form-label">Item Code</label>
+                    <input type="text" class="form-control" id="inputItemCode" placeholder="I001">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="inputItemName" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="inputItemName" placeholder="Sugar">
+                </div>
+
+                <div class="col-12">
+                    <label for="inputItemPrice" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="inputItemPrice" placeholder="200.00">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputItemQty" class="form-label">QTY</label>
+                    <input type="number" class="form-control" id="inputItemQty" placeholder="10">
+                </div>
+
+                <div class="button-set">
+
+                    <div>
+                        <button type="button" id="btnSaveI" class="btn btn-primary">Save</button>
+                    </div>
+
+                    <div>
+                        <button type="button" id="btnUpdateI" class="btn btn-primary" style="background-color: orangered">Update</button>
+                    </div>
+
+                    <div>
+                        <button type="button" id="btnDeleteI" class="btn btn-primary" style="background-color: #ff253a">Delete</button>
+                    </div>
+
+                    <div>
+                        <button type="reset" id="btnClearI" class="btn btn-primary" style="background-color: firebrick" >Clear</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">Item name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">QTY</th>
+                </tr>
+                </thead>
+                <tbody id="itemTBody"></tbody>
+            </table>
+
+        </section>
+
+    </section>
+
+    <section id="mClass04">
+
+        <section id="mClass04Sub01">
+
+            <section id="pOrder">
+
+                <form>
+
+                    <h4 style="color: #20c997; font-weight: bold; text-align: center; background-color: #4f5050">Select Customer</h4>
+
+                    <br>
+
+                    <div class="row mb-3">
+                        <label for="customerID" class="col-sm-2 col-form-label">ID</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="customerID">
+                                <option value="1">C001</option>
+                                <option value="2">C002</option>
+                                <option value="3">C003</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="inputName1" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName1">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="inputAddress1" class="col-sm-2 col-form-label">Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputAddress1">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="contact" class="col-sm-2 col-form-label">Contact</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="contact">
+                        </div>
+                    </div>
+
+                </form>
+
+            </section>
+
+            <section>
+
+                <form>
+
+                    <h4 style="color: #20c997; font-weight: bold; text-align: center; background-color: #4f5050">Select Items</h4>
+
+                    <br>
+
+                    <div class="row mb-3">
+                        <label for="ItemCode" class="col-sm-2 col-form-label">Code</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="ItemCode">
+                                <option value="1">I001</option>
+                                <option value="2">I002</option>
+                                <option value="3">I003</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="itemName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="itemName">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="itemPrice" class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="itemPrice">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="QTY" class="col-sm-2 col-form-label">QTY</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="QTY">
+                        </div>
+                    </div>
+
+                    <button type="add" class="btn btn-primary">Add to Cart</button>
+
+                </form>
+
+            </section>
+
+        </section>
+
+        <section id="mClass04Sub02">
+
+            <table class="table">
+
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Customer ID</th>
+                    <th scope="col">Item name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">QTY</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+
+            <label for="total">Total : </label>
+            <label id="total">00.00</label>
+            <button type="purchase">Purchase</button>
+
+        </section>
+
+    </section>
+
+</main>
+
+<script src="assests/lib/jQuery/jquery-3.6.4.min.js"></script>
+
+<script type="module" src="../POS_System/controller/CustomerController.js"></script>
+<script type="module" src="../POS_System/controller/ItemController.js"></script>
+<script type="module" src="DB/db.js"></script>
+
+<script>
+
+    document.getElementById("btnHome").addEventListener('click', () => {
+        $('#mClass01').css("display", "unset");
+        $('#mClass02').css("display", "none");
+        $('#mClass03').css("display", "none");
+        $('#mClass04').css("display", "none");
+    })
+
+    document.getElementById("btnCustomer").addEventListener('click', () => {
+        $('#mClass01').css("display", "none");
+        $('#mClass02').css("display", "unset");
+        $('#mClass03').css("display", "none");
+        $('#mClass04').css("display", "none");
+    })
+
+    document.getElementById("btnStore").addEventListener('click', () => {
+        $('#mClass01').css("display", "none");
+        $('#mClass02').css("display", "none");
+        $('#mClass03').css("display", "unset");
+        $('#mClass04').css("display", "none");
+    })
+
+    document.getElementById("btnPlaceOrder").addEventListener('click', () => {
+        $('#mClass01').css("display", "none");
+        $('#mClass02').css("display", "none");
+        $('#mClass03').css("display", "none");
+        $('#mClass04').css("display", "unset");
+    })
+
+    document.getElementById("btnLogin").addEventListener('click', () => {
+        $('#mClass01').css("display", "none");
+        $('#mClass04').css("display", "unset");
+    })
+
+</script>
+
+<!--    //                                      mClass02 (Customer management)-->
+
+<script>
+    // const data = "POS_Customer";
+    //
+    // function loadData() {
+    //     let pre_data = localStorage.getItem(data);
+    //     let customer_arr = JSON.parse(pre_data);
+    //     customer_arr.map((result, index) => {
+    //         var row = "<tr>" +
+    //             "<td>"+ result.customer_id +"</td>" +
+    //             "<td>"+ result.customer_name +"</td>" +
+    //             "<td>"+ result.customer_address +"</td>" +
+    //             "<td>"+ result.customer_contact +"</td>" +
+    //             "</tr>";
+    //         $('#customerTBody').append(row);
+    //     })
+    // }
+    //
+    // $('#btnSaveC').on('click', () => {
+    //
+    //     var customer_id = $('#inputCustomerId').val();
+    //     var customer_name = $('#inputCustomerName').val();
+    //     var customer_address = $('#inputCustomerAddress').val();
+    //     var customer_contact = $('#inputCustomerContact').val();
+    //
+    //     let pre_data = localStorage.getItem(data);
+    //
+    //     let customer_arr2 = [];
+    //
+    //     if (pre_data) {
+    //         customer_arr2 = JSON.parse(pre_data);
+    //     }
+    //
+    //     var obj = {
+    //         customer_id: customer_id,
+    //         customer_name: customer_name,
+    //         customer_address: customer_address,
+    //         customer_contact: customer_contact
+    //     }
+    //
+    //     customer_arr2.push(obj);
+    //     localStorage.setItem(data, JSON.stringify(customer_arr2));
+    //
+    //     $('#customerTBody tr').remove();
+    //     loadData();
+    //
+    // })
+    //
+    // $('#customerTBody tr').remove();
+    // loadData();
+    //
+    // $('#customerTBody').on('click', 'td', (event) => {
+    //     $('#inputCustomerId').val($(event.target).closest('tr').find('td').eq(0).text());
+    //     $('#inputCustomerName').val($(event.target).closest('tr').find('td').eq(1).text());
+    //     $('#inputCustomerAddress').val($(event.target).closest('tr').find('td').eq(2).text());
+    //     $('#inputCustomerContact').val($(event.target).closest('tr').find('td').eq(3).text());
+    // })
+    //
+    // $('#btnUpdateC').on('click', () => {
+    //     let customer_id = $('#inputCustomerId').val();
+    //
+    //     let pre_data = localStorage.getItem(data);
+    //     let customer_arr = JSON.parse(pre_data);
+    //
+    //     let index = customer_arr.findIndex(e => e.customer_id === customer_id);
+    //
+    //     if (index>-1) {
+    //         customer_arr[index].customer_name = $('#inputCustomerName').val();
+    //         customer_arr[index].customer_address = $('#inputCustomerAddress').val();
+    //         customer_arr[index].customer_contact = $('#inputCustomerContact').val();
+    //     } else {
+    //         alert("Not Found the customer..!");
+    //     }
+    //
+    //     localStorage.setItem(data, JSON.stringify(customer_arr));
+    //     $('#customerTBody tr').remove();
+    //     loadData();
+    // })
+    //
+    // $('#btnDeleteC').on('click', () => {
+    //     let customer_id = $('#inputCustomerId').val();
+    //
+    //     let pre_data = localStorage.getItem(data);
+    //     let customer_arr = JSON.parse(pre_data);
+    //
+    //     let index = customer_arr.findIndex(e => e.customer_id === customer_id);
+    //
+    //     customer_arr.splice(index);
+    //
+    //     localStorage.setItem(data, JSON.stringify(customer_arr));
+    //     $('#customerTBody tr').remove();
+    //     loadData();
+    // })
+
+</script>
+
+<!--    //                                           mClass03 (Item management)-->
+
+<script>
+
+    // const data2 = "POS_Item";
+    //
+    // function loadItems() {
+    //     let pre_data = localStorage.getItem(data2);
+    //     let item_arr = JSON.parse(pre_data);
+    //     item_arr.map((result, index) => {
+    //         var row = "<tr>" +
+    //             "<td>"+ result.item_code +"</td>" +
+    //             "<td>"+ result.item_name +"</td>" +
+    //             "<td>"+ result.item_price +"</td>" +
+    //             "<td>"+ result.item_qty +"</td>" +
+    //             "</tr>";
+    //         $('#itemTBody').append(row);
+    //     })
+    // }
+    //
+    // $('#btnSaveI').on('click', () => {
+    //
+    //     var item_code = $('#inputItemCode').val();
+    //     var item_name = $('#inputItemName').val();
+    //     var item_price = $('#inputItemPrice').val();
+    //     var item_qty = $('#inputItemQty').val();
+    //
+    //     let pre_data = localStorage.getItem(data2);
+    //
+    //     let item_arr2 = [];
+    //
+    //     if (pre_data) {
+    //         item_arr2 = JSON.parse(pre_data);
+    //     }
+    //
+    //     var obj = {
+    //         item_code: item_code,
+    //         item_name: item_name,
+    //         item_price: item_price,
+    //         item_qty: item_qty
+    //     }
+    //
+    //     item_arr2.push(obj);
+    //     localStorage.setItem(data2, JSON.stringify(item_arr2));
+    //
+    //     $('#itemTBody tr').remove();
+    //     loadItems();
+    //
+    // })
+    //
+    // $('#itemTBody tr').remove();
+    // loadItems();
+    //
+    // $('#itemTBody').on('click', "tr", (event) => {
+    //     $('#inputItemCode').val($(event.target).closest('tr').find('td').eq(0).text());
+    //     $('#inputItemName').val($(event.target).closest('tr').find('td').eq(1).text());
+    //     $('#inputItemPrice').val($(event.target).closest('tr').find('td').eq(2).text());
+    //     $('#inputItemQty').val($(event.target).closest('tr').find('td').eq(3).text());
+    // })
+    //
+    // $('#btnUpdateI').on('click', () => {
+    //     let item_code = $('#inputItemCode').val();
+    //
+    //     let pre_data = localStorage.getItem(data2);
+    //     let item_arr = JSON.parse(pre_data);
+    //
+    //     let index = item_arr.findIndex(e => e.item_code === item_code);
+    //
+    //     if (index > -1) {
+    //         item_arr[index].item_name = $('#inputItemName').val();
+    //         item_arr[index].item_price = $('#inputItemPrice').val();
+    //         item_arr[index].item_qty = $('#inputItemQty').val();
+    //     } else {
+    //         alert("Not found the item..!");
+    //     }
+    //
+    //     localStorage.setItem(data2, JSON.stringify(item_arr));
+    //     $('#itemTBody tr').remove();
+    //     loadItems();
+    // })
+    //
+    // $('#btnDeleteI').on('click', () => {
+    //     let item_code = $('#inputItemCode').val();
+    //
+    //     let pre_data = localStorage.getItem(data2);
+    //     let item_arr = JSON.parse(pre_data);
+    //
+    //     let index = item_arr.findIndex(e => e.item_code === item_code);
+    //
+    //     item_arr.splice(index);
+    //
+    //     localStorage.setItem(data2, JSON.stringify(item_arr));
+    //     $('#itemTBody tr').remove();
+    //     loadItems();
+    // })
+
+</script>
+
+</body>
+</html>
