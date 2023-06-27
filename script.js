@@ -113,11 +113,23 @@ const close =document.querySelector('.close')
     })
 // --
 const assignment=document.querySelector('.assignment');
+const webProjects=document.querySelector('.web-projects');
 const seemore=document.querySelector('.seeAssig');
+const seemoreWeb=document.querySelector('.seeWeb');
 const cut=document.querySelector('.cut');
+const cutWeb=document.querySelector('.cutWeb');
 seemore.addEventListener('click',()=>{
     assignment.style.display="block"
 })
 cut.addEventListener('click',()=>{
     assignment.style.display="none"
+
+})
+
+seemoreWeb.addEventListener('click',()=>{
+    webProjects.style.display="block"
+})
+cutWeb.addEventListener('click',()=>{
+    webProjects.style.display="none"
+
 })

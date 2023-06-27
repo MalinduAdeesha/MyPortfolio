@@ -16,8 +16,8 @@
     <style>
 
         * {
-            font-family: 'Alkatra', cursive;
-            font-family: 'Ubuntu', sans-serif;
+            /*font-family: 'Alkatra', cursive;*/
+            /*font-family: 'Ubuntu', sans-serif;*/
         }
 
         body {
@@ -261,16 +261,16 @@
             font-size: 2vw;
         }
 
-        #mClass04Sub02>button {
-            background-color: #20c997;
-            border-radius: 10px;
-            border: 2px solid #5c636a;
-            font-weight: bold;
+        /*#mClass04Sub02>button {*/
+        /*    background-color: #20c997;*/
+        /*    border-radius: 10px;*/
+        /*    border: 2px solid #5c636a;*/
+        /*    font-weight: bold;*/
 
-            position: relative;
-            left: 55vw;
-            margin-top: 10px;
-        }
+        /*    position: relative;*/
+        /*    left: 55vw;*/
+        /*    margin-top: 10px;*/
+        /*}*/
         .headerClass01{
             background-color: #ff253a;
         }
@@ -345,14 +345,14 @@
             border-radius: 5px;
         }
         #mClass02>section>h3{
-            font-family:'Alkatra', cursive ;
+            /*font-family:'Alkatra', cursive ;*/
             font-size: 2.5em;
             color: palegreen;
             height: 50px;
             background: gray;
         }
         #mClass03>section>h3{
-            font-family:'Alkatra', cursive ;
+            /*font-family:'Alkatra', cursive ;*/
             font-size: 2.5em;
             color: palegreen;
             height: 50px;
@@ -365,10 +365,11 @@
        #customer form{
             background: transparent;
         }
-        #mClass04Sub01>section:nth-child(2)>form>button{
+        #mClass04Sub01>section:nth-child(2)>form button{
             position: relative;
+            width: 150px;
             top: 160px;
-            left:-350px;
+            left:450px;
             background: goldenrod;
 
         }
@@ -376,6 +377,23 @@
             position: relative;
             top: 100px;
             right: 100px;
+        }
+        #btnDeleteOrder {
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            background-color: #fd2727;
+            border-radius: 10px;
+            border: 2px solid #5c636a;
+            font-weight: bold;
+        }
+         #one{
+            position: relative;
+            width: 200px;
+        }
+        #tw{
+            position: relative;
+            width: 200px;
         }
     </style>
 
@@ -440,22 +458,22 @@
             <form class="row g-3">
 
                 <div class="col-md-6">
-                    <label for="inputCustomerId" class="form-label">Customer ID</label>
+                    <label for="inputCustomerId" class="form-label"id="one">Customer ID</label>
                     <input type="text" class="form-control" id="inputCustomerId" placeholder="eg : 001">
                 </div>
 
                 <div class="col-md-12">
-                    <label for="inputCustomerName" class="form-label">Customer Name</label>
+                    <label for="inputCustomerName" class="form-label"id="tw">Customer Name</label>
                     <input type="text" class="form-control" id="inputCustomerName" placeholder="eg : Kamal">
                 </div>
 
                 <div class="col-12">
-                    <label for="inputCustomerAddress" class="form-label">Address</label>
+                    <label for="inputCustomerAddress" class="form-label"id="thr">Address</label>
                     <input type="text" class="form-control" id="inputCustomerAddress" placeholder="eg : Colombo">
                 </div>
 
                 <div class="col-md-6">
-                    <label for="inputCustomerContact" class="form-label">Contact number</label>
+                    <label for="inputCustomerContact" class="form-label"id="fou">Contact number</label>
                     <input type="text" class="form-control" id="inputCustomerContact" placeholder="eg : 0711234567">
                 </div>
 
@@ -511,22 +529,22 @@
 
                 <div class="col-md-6">
                     <label for="inputItemCode" class="form-label">Item Code</label>
-                    <input type="text" class="form-control" id="inputItemCode" placeholder="I001">
+                    <input type="text" class="form-control" id="inputItemCode" placeholder="eg : 001">
                 </div>
 
                 <div class="col-md-12">
                     <label for="inputItemName" class="form-label">Item Name</label>
-                    <input type="text" class="form-control" id="inputItemName" placeholder="Sugar">
+                    <input type="text" class="form-control" id="inputItemName" placeholder="eg : Sugar">
                 </div>
 
                 <div class="col-12">
                     <label for="inputItemPrice" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="inputItemPrice" placeholder="200.00">
+                    <input type="number" class="form-control" id="inputItemPrice" placeholder="eg : 200.00">
                 </div>
 
                 <div class="col-md-6">
                     <label for="inputItemQty" class="form-label">QTY</label>
-                    <input type="number" class="form-control" id="inputItemQty" placeholder="10">
+                    <input type="number" class="form-control" id="inputItemQty" placeholder="eg : 10">
                 </div>
 
                 <div class="button-set">
@@ -584,34 +602,34 @@
                     <br>
 
                     <div class="row mb-3">
-                        <label for="customerID" class="col-sm-2 col-form-label">ID</label>
+                        <label for="selectCustomerID" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="customerID">
-                                <option value="1">C001</option>
-                                <option value="2">C002</option>
-                                <option value="3">C003</option>
+                            <select class="form-control" id="selectCustomerID">
+<!--                                <option value="1">C001</option>-->
+<!--                                <option value="2">C002</option>-->
+<!--                                <option value="3">C003</option>-->
                             </select>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="inputName1" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputCustomerName2" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName1">
+                            <input type="text" class="form-control" id="inputCustomerName2">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="inputAddress1" class="col-sm-2 col-form-label">Address</label>
+                        <label for="inputCustomerAddress2" class="col-sm-2 col-form-label">Address</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputAddress1">
+                            <input type="text" class="form-control" id="inputCustomerAddress2">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="contact" class="col-sm-2 col-form-label">Contact</label>
+                        <label for="inputCustomerContact2" class="col-sm-2 col-form-label">Contact</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="contact">
+                            <input type="number" class="form-control" id="inputCustomerContact2">
                         </div>
                     </div>
 
@@ -628,38 +646,38 @@
                     <br>
 
                     <div class="row mb-3">
-                        <label for="ItemCode" class="col-sm-2 col-form-label">Code</label>
+                        <label for="selectItemCode" class="col-sm-2 col-form-label">Code</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="ItemCode">
-                                <option value="1">I001</option>
-                                <option value="2">I002</option>
-                                <option value="3">I003</option>
+                            <select class="form-control" id="selectItemCode">
+<!--                                <option value="1">I001</option>-->
+<!--                                <option value="2">I002</option>-->
+<!--                                <option value="3">I003</option>-->
                             </select>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="itemName" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputItemName2" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="itemName">
+                            <input type="text" class="form-control" id="inputItemName2">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="itemPrice" class="col-sm-2 col-form-label">Price</label>
+                        <label for="inputItemPrice2" class="col-sm-2 col-form-label">Price</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="itemPrice">
+                            <input type="number" class="form-control" id="inputItemPrice2">
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="QTY" class="col-sm-2 col-form-label">QTY</label>
+                        <label for="inputItemQty2" class="col-sm-2 col-form-label">QTY</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="QTY">
+                            <input type="number" class="form-control" id="inputItemQty2">
                         </div>
                     </div>
 
-                    <button type="add" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" id="btnPurchase">Add List</button>
 
                 </form>
 
@@ -673,8 +691,8 @@
 
                 <thead>
                 <tr>
-                    <th scope="col">Item Code</th>
                     <th scope="col">Customer ID</th>
+                    <th scope="col">Item Code</th>
                     <th scope="col">Item name</th>
                     <th scope="col">Price</th>
                     <th scope="col">QTY</th>
@@ -682,14 +700,17 @@
                 </tr>
                 </thead>
 
-                <tbody></tbody>
+                <tbody id="placeOrderTBody"></tbody>
             </table>
+            <button type="button" id="btnDeleteOrder">Delete Order</button>
 
-            <label for="total">Total : </label>
-            <label id="total">00.00</label>
-            <button type="purchase">Purchase</button>
+
+<!--            <label for="total">Total : </label>-->
+<!--            <label id="total">00.00</label>-->
+
 
         </section>
+
 
     </section>
 
@@ -700,6 +721,7 @@
 <script type="module" src="../POS_System/controller/CustomerController.js"></script>
 <script type="module" src="../POS_System/controller/ItemController.js"></script>
 <script type="module" src="DB/db.js"></script>
+<script type="module" src="controller/OrderDetailsController.js"></script>
 
 <script>
 
@@ -735,201 +757,6 @@
         $('#mClass01').css("display", "none");
         $('#mClass04').css("display", "unset");
     })
-
-</script>
-
-<!--    //                                      mClass02 (Customer management)-->
-
-<script>
-    // const data = "POS_Customer";
-    //
-    // function loadData() {
-    //     let pre_data = localStorage.getItem(data);
-    //     let customer_arr = JSON.parse(pre_data);
-    //     customer_arr.map((result, index) => {
-    //         var row = "<tr>" +
-    //             "<td>"+ result.customer_id +"</td>" +
-    //             "<td>"+ result.customer_name +"</td>" +
-    //             "<td>"+ result.customer_address +"</td>" +
-    //             "<td>"+ result.customer_contact +"</td>" +
-    //             "</tr>";
-    //         $('#customerTBody').append(row);
-    //     })
-    // }
-    //
-    // $('#btnSaveC').on('click', () => {
-    //
-    //     var customer_id = $('#inputCustomerId').val();
-    //     var customer_name = $('#inputCustomerName').val();
-    //     var customer_address = $('#inputCustomerAddress').val();
-    //     var customer_contact = $('#inputCustomerContact').val();
-    //
-    //     let pre_data = localStorage.getItem(data);
-    //
-    //     let customer_arr2 = [];
-    //
-    //     if (pre_data) {
-    //         customer_arr2 = JSON.parse(pre_data);
-    //     }
-    //
-    //     var obj = {
-    //         customer_id: customer_id,
-    //         customer_name: customer_name,
-    //         customer_address: customer_address,
-    //         customer_contact: customer_contact
-    //     }
-    //
-    //     customer_arr2.push(obj);
-    //     localStorage.setItem(data, JSON.stringify(customer_arr2));
-    //
-    //     $('#customerTBody tr').remove();
-    //     loadData();
-    //
-    // })
-    //
-    // $('#customerTBody tr').remove();
-    // loadData();
-    //
-    // $('#customerTBody').on('click', 'td', (event) => {
-    //     $('#inputCustomerId').val($(event.target).closest('tr').find('td').eq(0).text());
-    //     $('#inputCustomerName').val($(event.target).closest('tr').find('td').eq(1).text());
-    //     $('#inputCustomerAddress').val($(event.target).closest('tr').find('td').eq(2).text());
-    //     $('#inputCustomerContact').val($(event.target).closest('tr').find('td').eq(3).text());
-    // })
-    //
-    // $('#btnUpdateC').on('click', () => {
-    //     let customer_id = $('#inputCustomerId').val();
-    //
-    //     let pre_data = localStorage.getItem(data);
-    //     let customer_arr = JSON.parse(pre_data);
-    //
-    //     let index = customer_arr.findIndex(e => e.customer_id === customer_id);
-    //
-    //     if (index>-1) {
-    //         customer_arr[index].customer_name = $('#inputCustomerName').val();
-    //         customer_arr[index].customer_address = $('#inputCustomerAddress').val();
-    //         customer_arr[index].customer_contact = $('#inputCustomerContact').val();
-    //     } else {
-    //         alert("Not Found the customer..!");
-    //     }
-    //
-    //     localStorage.setItem(data, JSON.stringify(customer_arr));
-    //     $('#customerTBody tr').remove();
-    //     loadData();
-    // })
-    //
-    // $('#btnDeleteC').on('click', () => {
-    //     let customer_id = $('#inputCustomerId').val();
-    //
-    //     let pre_data = localStorage.getItem(data);
-    //     let customer_arr = JSON.parse(pre_data);
-    //
-    //     let index = customer_arr.findIndex(e => e.customer_id === customer_id);
-    //
-    //     customer_arr.splice(index);
-    //
-    //     localStorage.setItem(data, JSON.stringify(customer_arr));
-    //     $('#customerTBody tr').remove();
-    //     loadData();
-    // })
-
-</script>
-
-<!--    //                                           mClass03 (Item management)-->
-
-<script>
-
-    // const data2 = "POS_Item";
-    //
-    // function loadItems() {
-    //     let pre_data = localStorage.getItem(data2);
-    //     let item_arr = JSON.parse(pre_data);
-    //     item_arr.map((result, index) => {
-    //         var row = "<tr>" +
-    //             "<td>"+ result.item_code +"</td>" +
-    //             "<td>"+ result.item_name +"</td>" +
-    //             "<td>"+ result.item_price +"</td>" +
-    //             "<td>"+ result.item_qty +"</td>" +
-    //             "</tr>";
-    //         $('#itemTBody').append(row);
-    //     })
-    // }
-    //
-    // $('#btnSaveI').on('click', () => {
-    //
-    //     var item_code = $('#inputItemCode').val();
-    //     var item_name = $('#inputItemName').val();
-    //     var item_price = $('#inputItemPrice').val();
-    //     var item_qty = $('#inputItemQty').val();
-    //
-    //     let pre_data = localStorage.getItem(data2);
-    //
-    //     let item_arr2 = [];
-    //
-    //     if (pre_data) {
-    //         item_arr2 = JSON.parse(pre_data);
-    //     }
-    //
-    //     var obj = {
-    //         item_code: item_code,
-    //         item_name: item_name,
-    //         item_price: item_price,
-    //         item_qty: item_qty
-    //     }
-    //
-    //     item_arr2.push(obj);
-    //     localStorage.setItem(data2, JSON.stringify(item_arr2));
-    //
-    //     $('#itemTBody tr').remove();
-    //     loadItems();
-    //
-    // })
-    //
-    // $('#itemTBody tr').remove();
-    // loadItems();
-    //
-    // $('#itemTBody').on('click', "tr", (event) => {
-    //     $('#inputItemCode').val($(event.target).closest('tr').find('td').eq(0).text());
-    //     $('#inputItemName').val($(event.target).closest('tr').find('td').eq(1).text());
-    //     $('#inputItemPrice').val($(event.target).closest('tr').find('td').eq(2).text());
-    //     $('#inputItemQty').val($(event.target).closest('tr').find('td').eq(3).text());
-    // })
-    //
-    // $('#btnUpdateI').on('click', () => {
-    //     let item_code = $('#inputItemCode').val();
-    //
-    //     let pre_data = localStorage.getItem(data2);
-    //     let item_arr = JSON.parse(pre_data);
-    //
-    //     let index = item_arr.findIndex(e => e.item_code === item_code);
-    //
-    //     if (index > -1) {
-    //         item_arr[index].item_name = $('#inputItemName').val();
-    //         item_arr[index].item_price = $('#inputItemPrice').val();
-    //         item_arr[index].item_qty = $('#inputItemQty').val();
-    //     } else {
-    //         alert("Not found the item..!");
-    //     }
-    //
-    //     localStorage.setItem(data2, JSON.stringify(item_arr));
-    //     $('#itemTBody tr').remove();
-    //     loadItems();
-    // })
-    //
-    // $('#btnDeleteI').on('click', () => {
-    //     let item_code = $('#inputItemCode').val();
-    //
-    //     let pre_data = localStorage.getItem(data2);
-    //     let item_arr = JSON.parse(pre_data);
-    //
-    //     let index = item_arr.findIndex(e => e.item_code === item_code);
-    //
-    //     item_arr.splice(index);
-    //
-    //     localStorage.setItem(data2, JSON.stringify(item_arr));
-    //     $('#itemTBody tr').remove();
-    //     loadItems();
-    // })
 
 </script>
 

@@ -1,5 +1,6 @@
 const data = "POS_Customer";
 const data2 = "POS_Item";
+const data3 = "POS_OrderDetails";
 
 export function saveCustomerDB(new_customer) {
     let pre_data = localStorage.getItem(data);
@@ -110,4 +111,89 @@ export function deleteItemDB(item_code) {
     item_arr.splice(index);
 
     localStorage.setItem(data2, JSON.stringify(item_arr));
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+export function loadCustomerDetails(customer_id) {
+    let pre_data = localStorage.getItem(data);
+    let customer_arr = JSON.parse(pre_data);
+
+    let findIndex = customer_arr.findIndex(e => e._customer_id === customer_id);
+
+    if (findIndex>-1) {
+        $('#inputCustomerName2').val(customer_arr[findIndex]._customer_name);
+        $('#inputCustomerAddress2').val(customer_arr[findIndex]._customer_address);
+        $('#inputCustomerContact2').val(customer_arr[findIndex]._customer_contactNumber);
+    } else {
+        alert("Customer not found..!");
+    }
+}
+
+export function loadItemCodeDetails(item_code) {
+    let pre_data = localStorage.getItem(data2);
+    let item_arr = JSON.parse(pre_data);
+
+    let findIndex = item_arr.findIndex(e => e._item_code === item_code);
+
+    if (findIndex>-1) {
+        $('#inputItemName2').val(item_arr[findIndex]._item_name);
+        $('#inputItemPrice2').val(item_arr[findIndex]._item_price);
+        $('#inputItemQty3').val(item_arr[findIndex]._item_qty);
+    } else {
+        alert("Item not Found");
+    }
+}
+
+export function saveOrderDetailsDB(orderDetails) {
+    let pre_data = localStorage.getItem(data3);
+
+    let orderDetails_arr = [];
+
+    if (pre_data) {
+        orderDetails_arr = JSON.parse(pre_data);
+    }
+
+    orderDetails_arr.push(orderDetails);
+    localStorage.setItem(data3, JSON.stringify(orderDetails_arr));
+}
+
+export function getOrderDetailsDB() {
+    let pre_data = localStorage.getItem(data3);
+
+    let orderDetails_arr = [];
+
+    if (pre_data) {
+        orderDetails_arr = JSON.parse(pre_data);
+    }
+
+    return orderDetails_arr;
+}
+
+export function changeItemQty(item_code ,item_qty) {
+    let pre_data = localStorage.getItem(data2);
+    let item_arr = JSON.parse(pre_data);
+
+    let index = item_arr.findIndex(e => e._item_code === item_code);
+
+    if (index > -1) {
+        let oldQty = item_arr[index]._item_qty;
+        item_arr[index]._item_qty = oldQty - item_qty;
+
+    } else {
+        alert("Not found the item..!");
+    }
+
+    localStorage.setItem(data2, JSON.stringify(item_arr));
+}
+
+export function deleteOrderDB(customer_id) {
+    let pre_data = localStorage.getItem(data3);
+    let orders_arr = JSON.parse(pre_data);
+
+    let index = orders_arr.findIndex(e => e._customer_id === customer_id);
+
+    orders_arr.splice(index);
+
+    localStorage.setItem(data3, JSON.stringify(orders_arr));
 }

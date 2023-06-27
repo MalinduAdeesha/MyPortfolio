@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nightrider</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        section{
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        section div{
+            border: 1px solid black;
+            width: 100px;
+            height: 30px;
+            margin: 5px;
+        }
+        #button {
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 100px;
+            margin:auto;
+        }
+        /*div:nth-child(1){*/
+        /*    background-color: red;*/
+        /*}*/
+        /*div:nth-child(2){*/
+        /*    background-color: deeppink;*/
+        /*}*/
+        /*div:nth-child(3){*/
+        /*    background-color: hotpink;*/
+        /*}*/
+        /*div:nth-child(4){*/
+        /*    background-color: lightpink;*/
+        /*}*/
+        /*div:nth-child(5){*/
+        /*    background-color: palegoldenrod;*/
+        /*}*/
+        /*div:nth-child(  6){*/
+        /*    background-color: powderblue;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<section id="light-panel">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+</section>
+<section id="button">
+
+    <button type="button" id="btnStart">start</button>
+    <button type="button" id="btnStop">stop</button>
+
+</section>
+<script src="assets/lib/jquery/jquery-3.6.4.min.js"></script>
+<audio src="assets/audio/Knight%20Rider%20Sms%20!%20Knight%20Rider%20!%20Theme.mp3" id="audio"></audio>
+<script>
+
+    var lightNumber = 0;
+    var direction = "RIGHT";
+
+    var lights = $('.light');
+
+    function updateLights() {
+        $('.light').css({background: 'white'});
+        lights[lightNumber].style.background = 'deepPink';
+
+        if (lightNumber > 0) {
+            lights[lightNumber - 1].style.background = 'pink';
+        }
+        if (lightNumber === 6) {
+            lights[lightNumber - 1].style.background = 'lightGreen';
+        }
+        if (lightNumber < 3) {
+            lights[lightNumber + 1].style.background = 'red';
+        }
+        if (lightNumber===3){
+            lights[lightNumber].style.background = 'blue';
+        }
+        if (lightNumber === 3) {
+            lights[lightNumber + 1].style.background = 'lightBlue';
+        }
+        if (lightNumber === 3) {
+            lights[lightNumber + 2].style.background = 'purple';
+        }
+        if (lightNumber === 3) {
+            lights[lightNumber + 3].style.background = 'lightgreen';
+        }
+        if (lightNumber === 6) {
+            direction = 'LEFT';
+        }
+        if (lightNumber === 0) {
+            direction = 'RIGHT';
+        }
+        if (direction === 'RIGHT') {
+            lightNumber++;
+        } else {
+            lightNumber--;
+        }
+    }
+
+    // setInterval(updateLights, 50);
+    $('#btnStart').on('click', () => {
+        $('#audio')[0].play();
+        intervalID = setInterval(updateLights, 100);
+    });
+    $('#btnStop').on('click', () => {
+        $('#audio')[0].pause();
+        clearInterval(intervalID);
+    });
+
+</script>
+</body>
+</html>

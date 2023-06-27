@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <style>
+
+        main {
+            width: 300px;
+            height: 400px;
+            border: 2px solid;
+            border-radius: 10px;
+
+            background-color: gray;
+
+            padding: 10px;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>form>section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+
+        main>form>section>button {
+            height: 50px;
+            border: 1px solid red;
+
+            margin: 2px;
+        }
+
+        main>form>section>button:hover {
+            background-color: yellow;
+        }
+
+        main>form>section>button:nth-child(4):hover {
+            background-color: deeppink;
+        }
+
+        main>form>input {
+            width: 230px;
+            height: 20px;
+            position: relative;
+            left: 30px;
+        }
+
+        main>form>section>button:nth-child(16) {
+            height: 105px;
+            grid-column: 4;
+            grid-row: 4/6;
+        }
+
+        .display {
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+
+        #viewText {
+            text-align: right;
+            flex: 1;
+            height: 30px;
+            font-size: 20px;
+            box-shadow: none;
+        }
+
+        .btnClass {
+            color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<main>
+
+    <form>
+
+        <div class="display">
+            <input type="text" id="viewText">
+        </div>
+        <!--        <hr>-->
+
+        <section>
+            <button type="reset" id="btnC" class="btnClass">C</button>
+
+            <button type="button" class="btnClass" onclick="viewText.value += '/'">/</button>
+
+            <button type="button" class="btnClass" onclick="viewText.value += '%'">%</button>
+            <button type="button" class="btnClass" onclick="viewText.value = viewText.value.toString().slice(0, -1)">Delete</button>
+
+            <button type="button" onclick="viewText.value += '7'">7</button>
+            <button type="button" onclick="viewText.value += '8'">8</button>
+            <button type="button" onclick="viewText.value += '9'">9</button>
+            <button type="button" class="btnClass" onclick="viewText.value += '+'">+</button>
+
+            <button type="button" onclick="viewText.value += '4'">4</button>
+            <button type="button" onclick="viewText.value += '5'">5</button>
+            <button type="button" onclick="viewText.value += '6'">6</button>
+            <button type="button" class="btnClass" onclick="viewText.value += '-'">-</button>
+
+            <button type="button" onclick="viewText.value += '1'">1</button>
+            <button type="button" onclick="viewText.value += '2'">2</button>
+            <button type="button" id="3" class="numberBtn" onclick="viewText.value += '3'">3</button>
+            <button type="button" class="btnClass" id="=" onclick="viewText.value = eval(viewText.value)">=</button>
+
+            <button type="button" id="." onclick="viewText.value += '.'">.</button>
+            <button type="button" id="0" class="numberBtn" onclick="viewText.value += '0'">0</button>
+            <button type="button" id="*" onclick="viewText.value += '*'">*</button>
+
+        </section>
+
+    </form>
+
+    <hr>
+
+</main>
+
+<script src="lib/jQuery/jquery-3.6.4.min.js"></script>
+
+<script>
+
+    console.log($('.numberBtn').addEventListener('click' , () => {
+        $('h1')[0].text("xfgbdxfbf");
+    }))
+
+</script>
+
+</body>
+</html>
